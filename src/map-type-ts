@@ -1,0 +1,47 @@
+
+const arrayOfNumbers = [1, 2, 3];
+const arrayOfStrings = arrayOfNumbers.map((item) => item.toString());
+
+type Volume ={
+    width: number;
+    height: number;
+    depth: number;
+}
+
+type AreaNumber ={
+    width: number;
+    height: number;
+}
+
+type Area <T> = {
+    // [key in keyof Volume]: Volume[key];  // [key in keyof Volume] 
+    [key in keyof T ]: T[key]
+}
+
+const area1 :Area<{name: string}> = {
+    name: 'hello'
+}
+
+type AreaString = {
+    width: string;
+    height: string;
+}
+
+type AreaReadOnly ={
+    readonly width: number;
+    readonly height: number;
+}
+
+const reactAngularArea: AreaNumber ={
+    width: 10,
+    height: 20
+}
+
+reactAngularArea.width = 30;
+
+
+
+
+
+type A = AreaNumber['height'] // number
+type B = keyof AreaNumber  // 'width' | 'height'
