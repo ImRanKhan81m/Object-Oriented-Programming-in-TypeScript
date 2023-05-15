@@ -99,4 +99,4 @@ function getAnimal(animal: Animals) {
 const animal1 = new Dog('Tommy', 'Dog');
 const animal2 = new Cat('Kitty', 'Cat');
 
-getAnimal(animal1);
+// getAnimal(animal1);
