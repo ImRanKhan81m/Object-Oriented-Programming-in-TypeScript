@@ -49,6 +49,8 @@ abstract class Vehicle {
         console.log("Vehicle is moving")
     }
 }
+
+
 class Car extends Vehicle {
     startEngine(): void {
         console.log("Engine started")
