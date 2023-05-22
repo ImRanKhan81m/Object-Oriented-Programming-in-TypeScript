@@ -50,7 +50,6 @@ abstract class Vehicle {
     }
 }
 
-
 class Car extends Vehicle {
     startEngine(): void {
         console.log("Engine started")
